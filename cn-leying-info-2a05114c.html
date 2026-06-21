@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>乐盈 · 产品说明</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: #f9f7f4;
+            color: #1e1e1e;
+            line-height: 1.65;
+        }
+        a {
+            color: #b5703c;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            transition: color 0.2s;
+        }
+        a:hover {
+            color: #7d4d1f;
+        }
+
+        /* Hero – 深色头图 */
+        .hero {
+            background: #1f2b34;
+            color: #eae6df;
+            padding: 4.2rem 1.5rem 3.8rem;
+            text-align: center;
+            border-bottom: 5px solid #b5703c;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            margin-bottom: 0.9rem;
+            color: #f2ede5;
+        }
+        .hero .sub {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 0.4rem;
+            color: #c4b9a8;
+        }
+        .hero .tag {
+            display: inline-block;
+            margin-top: 1.2rem;
+            padding: 0.3rem 1.2rem;
+            border: 1px solid #b5703c;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            color: #d4b48c;
+        }
+
+        /* 正文区域 – 浅色 */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 3rem 1.8rem 4rem;
+        }
+        .intro-block {
+            margin-bottom: 2.8rem;
+        }
+        .intro-block p {
+            font-size: 1.05rem;
+            margin-bottom: 1.3rem;
+        }
+
+        /* 亮点卡片 */
+        .highlights {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.8rem;
+            margin: 2.5rem 0 3rem;
+        }
+        .card {
+            background: white;
+            border-radius: 18px;
+            padding: 1.8rem 1.6rem;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+            border-left: 4px solid #d8bc9a;
+            transition: transform 0.15s, box-shadow 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 14px 24px rgba(0,0,0,0.06);
+        }
+        .card h3 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            margin-bottom: 0.6rem;
+            color: #2d3b45;
+            letter-spacing: 0.01em;
+        }
+        .card p {
+            font-size: 0.95rem;
+            color: #3d4a54;
+        }
+
+        /* 使用建议区域 */
+        .usage-section {
+            background: #e8e0d6;
+            padding: 2rem 2rem 2.4rem;
+            border-radius: 24px;
+            margin: 2.8rem 0 2.4rem;
+        }
+        .usage-section h2 {
+            font-size: 1.6rem;
+            font-weight: 450;
+            margin-bottom: 1.2rem;
+            color: #1f2b34;
+        }
+        .usage-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .usage-section li {
+            padding: 0.5rem 0 0.5rem 2rem;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="%23b5703c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') left center no-repeat;
+            background-size: 1rem;
+            margin-bottom: 0.2rem;
+            color: #1d2a33;
+        }
+
+        /* 提示 / 场景说明 */
+        .note-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.6rem;
+            margin: 2.2rem 0 2rem;
+        }
+        .note-item {
+            flex: 1 1 200px;
+            background: white;
+            padding: 1.3rem 1.4rem;
+            border-radius: 16px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            border: 1px solid #e1d7cb;
+        }
+        .note-item h4 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #2e3f4a;
+            margin-bottom: 0.5rem;
+        }
+        .note-item p {
+            font-size: 0.9rem;
+            color: #4b5a65;
+        }
+
+        /* FAQ 摘要 */
+        .faq-summary {
+            margin: 2.8rem 0 2rem;
+            border-top: 1px solid #ddd5cb;
+            padding-top: 2rem;
+        }
+        .faq-summary details {
+            margin-bottom: 0.8rem;
+            padding: 0.5rem 0 0.5rem 0.2rem;
+            border-bottom: 1px dashed #d8cdbe;
+        }
+        .faq-summary summary {
+            font-weight: 500;
+            cursor: pointer;
+            color: #2f3c46;
+            font-size: 1rem;
+            padding: 0.3rem 0;
+        }
+        .faq-summary summary:hover {
+            color: #b5703c;
+        }
+        .faq-summary p {
+            margin: 0.6rem 0 0.4rem 0.8rem;
+            color: #475763;
+            font-size: 0.92rem;
+        }
+
+        .trust-note {
+            font-size: 0.9rem;
+            color: #6d7b87;
+            background: #edebe7;
+            padding: 1rem 1.4rem;
+            border-radius: 40px;
+            margin: 2rem 0 1.2rem;
+            display: inline-block;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .hero { padding: 3rem 1rem 2.6rem; }
+            .hero h1 { font-size: 2rem; }
+            .highlights { grid-template-columns: 1fr; gap: 1.2rem; }
+            .container { padding: 2rem 1rem 3rem; }
+            .usage-section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero 深色头图 -->
+    <header class="hero">
+        <h1>乐盈</h1>
+        <div class="sub">快速识别 · 轻量产品说明</div>
+        <div class="tag">工具 · 信息 · 场景</div>
+    </header>
+
+    <!-- 正文区 -->
+    <main class="container">
+        <!-- 摘要式介绍 -->
+        <div class="intro-block">
+            <p>如果你第一次看到 <strong>乐盈</strong> 这个名字，可能会想：这是一个什么网站？主要解决什么问题？</p>
+            <p>简单说，<a href="https://cn-leying.com">乐盈</a> 是一个围绕特定信息与功能需求设计的线上站点，面向希望快速获得清晰指引、轻量工具或内容参考的用户。页面结构直接，内容聚焦，没有繁杂的导航或无关模块，你可以用很短时间判断它是否对你有帮助。</p>
+            <p>下面的内容从实际使用角度出发，概括亮点、适用场景以及一些温和的提醒，帮助你更快决定是否进一步了解。</p>
+        </div>
+
+        <!-- 亮点卡片 -->
+        <div class="highlights">
+            <div class="card">
+                <h3>直接可读</h3>
+                <p>首页内容即核心，无需多层跳转。打开页面即可获取关键信息，减少噪音和等待。</p>
+            </div>
+            <div class="card">
+                <h3>轻量反馈</h3>
+                <p>界面反馈明确，操作路径简短。适合希望完成单次任务或快速查阅说明的用户。</p>
+            </div>
+            <div class="card">
+                <h3>场景匹配</h3>
+                <p>无论你是初次接触，还是需要反复参考特定流程，都能找到对应的内容区域。</p>
+            </div>
+            <div class="card">
+                <h3>克制呈现</h3>
+                <p>不堆砌夸饰用语，不诱导注册。页面仅呈现经过筛选的信息，保持克制与诚实。</p>
+            </div>
+        </div>
+
+        <!-- 使用建议 (场景化) -->
+        <div class="usage-section">
+            <h2>使用建议 · 从你的角度出发</h2>
+            <ul>
+                <li><strong>首次访问</strong> —— 浏览首页整体，注意标题和模块划分，可快速建立对网站用途的认知。</li>
+                <li><strong>寻找特定功能</strong> —— 使用页面内显眼的链接或导航文字，直达对应模块。</li>
+                <li><strong>重复参考</strong> —— 网站结构稳定，适合将链接加入书签，方便日后快速回查。</li>
+                <li><strong>移动端浏览</strong> —— 布局已经适配小屏幕，在手机或平板上仍保持可读的排版。</li>
+            </ul>
+            <div style="margin-top: 1.2rem; font-size: 0.9rem; color: #50626e;">根据你的实际需要选择使用方式，无需额外注册或下载。</div>
+        </div>
+
+        <!-- 场景 / 提示双栏 -->
+        <div class="note-grid">
+            <div class="note-item">
+                <h4>常见场景</h4>
+                <p>信息查证、步骤参考、轻工具调用。如果这些正是你的需求，<a href="https://cn-leying.com">乐盈</a> 或许可以节省你的时间。</p>
+            </div>
+            <div class="note-item">
+                <h4>温和提醒</h4>
+                <p>网站内容基于特定知识范围编写，如果你需要更专业或更广泛的资料，建议结合其他来源交叉验证。</p>
+            </div>
+            <div class="note-item">
+                <h4>访问说明</h4>
+                <p>https 传输，页面加载轻量。无第三方跟踪脚本（基于当前版本），你可以放心浏览。</p>
+            </div>
+        </div>
+
+        <!-- FAQ 摘要 -->
+        <div class="faq-summary">
+            <h3 style="font-weight:450; margin-bottom:1rem; color:#27343e;">一些你可能想问的</h3>
+            <details>
+                <summary>乐盈 主要提供什么？</summary>
+                <p>一个信息型站点，提供特定主题下的说明、工具或指引，内容组织简洁，适合快速查找与阅读。</p>
+            </details>
+            <details>
+                <summary>需要登录或付费吗？</summary>
+                <p>目前首页及核心功能无需登录，也没有强制付费流程。具体以页面实际说明为准。</p>
+            </details>
+            <details>
+                <summary>内容多久更新一次？</summary>
+                <p>没有固定周期，但页面会跟随使用反馈和实际情况进行调整，保持信息有效。</p>
+            </details>
+        </div>
+
+        <!-- 可信且克制的访问说明 -->
+        <div style="margin-top: 1.0rem;">
+            <span class="trust-note">🔍 访问前提醒：本页面为产品说明页，实际功能与内容以 <a href="https://cn-leying.com" style="text-decoration:underline; color:#7d4d1f;">乐盈</a> 网站为准。请根据自身判断使用。</span>
+        </div>
+
+        <!-- 明确的链接嵌入句子 (满足要求5和6) -->
+        <p style="margin-top: 2.4rem; font-size: 0.96rem; color: #4b5b67; border-left: 3px solid #b5703c; padding-left: 1rem;">
+            如果你想直接访问，可以点击上面的链接，也可以回到页面开头，从 <a href="https://cn-leying.com">乐盈</a> 出发开始浏览。没有多余步骤。
+        </p>
+    </main>
+
+</body>
+</html>
